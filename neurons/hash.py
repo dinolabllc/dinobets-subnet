@@ -19,7 +19,7 @@ def generate_hash(
     nonce: int,
     round_id: str,
 ):
-    nonce_seed = client_seed + "-" + str(nonce) + str(round_id)
+    nonce_seed = client_seed + "-" + str(nonce)
     server_seed = salt_with_new_seed(config.SEVER_SEED, round_id)
     hash = salt_with_new_seed(server_seed, nonce_seed) 
     server_hash = salt(server_seed)

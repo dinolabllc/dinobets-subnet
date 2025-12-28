@@ -123,13 +123,12 @@ Operator performance and ranking are determined using the following scoring mode
 - **M** = Max profit
 - **H** = House edge
 - **C** = Number of unique users who play the operator's game
-- **G** = Daily percentage change of game-playing users
 - **W** = Total wager amount
 - **D** = Number of days the game has been running
 
 ```math
 \begin{aligned}
-Score = {\frac{\sqrt{M*P}}{H}} + \ln{C}*(1+0.5*G)*{\frac{W}{D}}
+Score = {\frac{\sqrt{M*P}}{H}} + \ln{C}*{\frac{W}{D}}
 \end{aligned}
 ```
 
